@@ -18,7 +18,7 @@ line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("gemini-2.0-flash")
 
 app = Flask(__name__)
 
@@ -51,7 +51,7 @@ def handle_text_message(event):
         )
     elif user_msg == 'video':
         reply = VideoSendMessage(
-            original_content_url='https://github.com/oao030oao/1111518-bot/blob/main/video.mov',
+            original_content_url='https://github.com/oao030oao/1111518-bot/blob/main/video.mp4',
             preview_image_url='https://media.discordapp.net/attachments/676704998666665990/1372645310773329930/image.png?ex=68278710&is=68263590&hm=f61f14827204ff0e57d1ca11d6c93e10422f8e72c13ed82f0d4b2f9936eed37f&=&format=webp&quality=lossless&width=354&height=350'
         )
         
