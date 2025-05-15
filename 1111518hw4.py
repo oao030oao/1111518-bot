@@ -43,7 +43,7 @@ def handle_text_message(event):
     elif user_msg == 'ok':
         reply = TextSendMessage(text='ok')
     elif user_msg == 'sticker':
-        reply = StickerSendMessage(package_id='1', sticker_id='1')
+        reply = StickerSendMessage(package_id='6359', sticker_id='11069850')
     elif user_msg == 'image':
         reply = ImageSendMessage(
             original_content_url='https://st3.depositphotos.com/30152186/37144/i/450/depositphotos_371445966-stock-photo-funny-kitten-grass-summer.jpg',
@@ -61,7 +61,7 @@ def handle_text_message(event):
             address="台北市中正區重慶南路一段122號",
             latitude=25.040319,
             longitude=121.511695
-    )
+        )
 
     else:
         try:
@@ -74,4 +74,4 @@ def handle_text_message(event):
 
 # 主程式執行
 if __name__ == "__main__":
-    app.run(host="127.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000)
