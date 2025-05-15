@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: line-ai-bot
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: LINE_CHANNEL_ACCESS_TOKEN
+        value: [nsz3jus1BDBGVCELxAz9nrQuAliM1bgeQ11efwWYJg/lRn2hrljdWIUV5BiM6fajG23zrTpYk+8rzxO1T0Nh0/mibflmZudjxlF8w+PrsrMrSV3depQAIRp3IxCpepjwHDEiC0/chK8IVH1JcG9fSgdB04t89/1O/w1cDnyilFU=]
+      - key: LINE_CHANNEL_SECRET
+        value: [dfd9cb8d5146df8514b5e6698b666a8c]
+      - key: GEMINI_API_KEY
+        value: [AIzaSyA1SaB61rRC1dHRYHalLssEmbbiVMRKBmk]
