@@ -10,9 +10,9 @@ from linebot.models import (
 import google.generativeai as genai
 import os
 
-LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN", "nsz3jus1BDBGVCELxAz9nrQuAliM1bgeQ11efwWYJg/lRn2hrljdWIUV5BiM6fajG23zrTpYk+8rzxO1T0Nh0/mibflmZudjxlF8w+PrsrMrSV3depQAIRp3IxCpepjwHDEiC0/chK8IVH1JcG9fSgdB04t89/1O/w1cDnyilFU=")
-LINE_CHANNEL_SECRET = os.getenv("LINE_CHANNEL_SECRET", "dfd9cb8d5146df8514b5e6698b666a8c")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyA1SaB61rRC1dHRYHalLssEmbbiVMRKBmk")
+LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
+LINE_CHANNEL_SECRET = os.getenv("LINE_CHANNEL_SECRET")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
@@ -40,10 +40,8 @@ def handle_text_message(event):
 
     if user_msg == 'hello':
         reply = TextSendMessage(text='你好')
-        print(f"[DEBUG] 使用者輸入：'{event.message.text}' 處理後：'{user_msg}'")
     elif user_msg == 'ok':
         reply = TextSendMessage(text='ok')
-        print(f"[DEBUG] 使用者輸入：'{event.message.text}' 處理後：'{user_msg}'")
     elif user_msg == 'sticker':
         reply = StickerSendMessage(package_id='6359', sticker_id='11069850')
     elif user_msg == 'image':
