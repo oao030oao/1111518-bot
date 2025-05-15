@@ -51,8 +51,8 @@ def handle_text_message(event):
         )
     elif user_msg == 'video':
         reply = VideoSendMessage(
-            original_content_url='https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4',
-            preview_image_url='https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217'
+            original_content_url='https://github.com/oao030oao/1111518-bot/blob/main/video.mov',
+            preview_image_url='https://media.discordapp.net/attachments/676704998666665990/1372645310773329930/image.png?ex=68278710&is=68263590&hm=f61f14827204ff0e57d1ca11d6c93e10422f8e72c13ed82f0d4b2f9936eed37f&=&format=webp&quality=lossless&width=354&height=350'
         )
         
     elif user_msg == 'location':
