@@ -40,8 +40,10 @@ def handle_text_message(event):
 
     if user_msg == 'hello':
         reply = TextSendMessage(text='你好')
+        print(f"[DEBUG] 使用者輸入：'{event.message.text}' 處理後：'{user_msg}'")
     elif user_msg == 'ok':
         reply = TextSendMessage(text='ok')
+        print(f"[DEBUG] 使用者輸入：'{event.message.text}' 處理後：'{user_msg}'")
     elif user_msg == 'sticker':
         reply = StickerSendMessage(package_id='6359', sticker_id='11069850')
     elif user_msg == 'image':
