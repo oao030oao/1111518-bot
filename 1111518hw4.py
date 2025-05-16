@@ -58,7 +58,7 @@ def handle_text_message(event):
         reply_text = '[image]'
     elif user_msg == 'video':
         reply = VideoSendMessage(
-            original_content_url='https://raw.githubusercontent.com/oao030oao/1111518-bot/main/video.mp4',
+            original_content_url='https://res.cloudinary.com/dmfcmhhqs/video/upload/v1747374583/uqtzdnnot1skuitcxfph.mp4',
             preview_image_url='https://2024-dailyview.s3.ap-northeast-1.amazonaws.com/Content/Upload/Popular/Images/2017-06/e99e6b5e-ca6c-4c19-87b7-dfd63db6381a_m.jpg'
         )
         reply_text = '[video]'
